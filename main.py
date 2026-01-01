@@ -7,11 +7,11 @@ def main():
     print(f"Starting Asteroids with pygame version:{pygame.version.vernum}")
     print(f"Screen width: {SCREEN_WIDTH}, Screen height: {SCREEN_HEIGHT}")
     log_state()
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            return
-    while screen:
+    while True:
+        for event in pygame.event.get():                                                                                            if event.type == pygame.QUIT:
+	    return
         screen.fill("black")
-    display.flip()
-if __name__ == "__main__":
-    main()
+    display.flip(pygame)
+
+    if __name__ == "__main__":
+        main()
