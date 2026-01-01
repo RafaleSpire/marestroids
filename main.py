@@ -6,12 +6,13 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     print(f"Starting Asteroids with pygame version:{pygame.version.vernum}")
     print(f"Screen width: {SCREEN_WIDTH}, Screen height: {SCREEN_HEIGHT}")
-    log_state()
     while True:
-        for event in pygame.event.get():                                                                                            if event.type == pygame.QUIT:
-	    return
-        screen.fill("black")
-    display.flip(pygame)
+        log_state()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+    screen.fill("black")
+    pygame.display.flip()
 
     if __name__ == "__main__":
         main()
